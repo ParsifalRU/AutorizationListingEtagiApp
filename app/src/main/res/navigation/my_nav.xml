@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/addObjectFragment">
+
+    <fragment
+        android:id="@+id/addObjectFragment"
+        android:name="com.example.autorizationlistingetagiapp.view.AddObjectFragment"
+        android:label="fragment_add_object"
+        tools:layout="@layout/fragment_add_object" >
+        <action
+            android:id="@+id/action_addObjectFragment_to_objectFragment"
+            app:destination="@id/objectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/autorizationFragment"
+        android:name="com.example.autorizationlistingetagiapp.view.AutorizationFragment"
+        android:label="fragment_autorization"
+        tools:layout="@layout/fragment_autorization" >
+        <action
+            android:id="@+id/action_autorizationFragment_to_listObjectsFragment"
+            app:destination="@id/listObjectsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/editObjectFragment"
+        android:name="com.example.autorizationlistingetagiapp.view.EditObjectFragment"
+        android:label="fragment_edit_object"
+        tools:layout="@layout/fragment_edit_object" >
+        <action
+            android:id="@+id/action_editObjectFragment_to_objectFragment"
+            app:destination="@id/objectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listObjectsFragment"
+        android:name="com.example.autorizationlistingetagiapp.view.ListObjectsFragment"
+        android:label="fragment_list_objects"
+        tools:layout="@layout/fragment_list_objects" >
+        <action
+            android:id="@+id/action_listObjectsFragment_to_objectFragment"
+            app:destination="@id/objectFragment" />
+        <action
+            android:id="@+id/action_listObjectsFragment_to_addObjectFragment"
+            app:destination="@id/addObjectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.autorizationlistingetagiapp.view.MainFragment"
+        android:label="fragment_maink"
+        tools:layout="@layout/fragment_maink" >
+        <action
+            android:id="@+id/action_mainFragment_to_autorizationFragment"
+            app:destination="@id/autorizationFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_listObjectsFragment2"
+            app:destination="@id/listObjectsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/objectFragment"
+        android:name="com.example.autorizationlistingetagiapp.view.ObjectFragment"
+        android:label="fragment_object"
+        tools:layout="@layout/fragment_object" >
+        <action
+            android:id="@+id/action_objectFragment_to_editObjectFragment"
+            app:destination="@id/editObjectFragment" />
+    </fragment>
+</navigation>
